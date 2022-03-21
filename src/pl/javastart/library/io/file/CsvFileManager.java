@@ -97,7 +97,7 @@ public class CsvFileManager implements FileManager {
             throw new DataImportException("Brak pliku " + PUBLICATIONS_FILE_NAME);
         }
     }
-
+// import usera 
     private void importUsers(Library library) {
         try (Scanner fileReader = new Scanner(new File(USERS_FILE_NAME))) {
             while (fileReader.hasNextLine()) {
@@ -109,7 +109,7 @@ public class CsvFileManager implements FileManager {
             throw new DataImportException("Brak pliku " + USERS_FILE_NAME);
         }
     }
-
+// stworzenie usera dla csv
     private LibraryUser createUserFromString(String csvText) {
         String[] split = csvText.split(";");
         String firstName = split[0];
